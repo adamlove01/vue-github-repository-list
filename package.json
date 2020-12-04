@@ -1,7 +1,15 @@
 {
   "name": "vue-github-repository-list",
-  "version": "0.1.0",
-  "private": true,
+  "author": "Adam Love",
+  "version": "1.0.0",
+  "description": "List Github repos by user name.",
+  "keywords": [
+    "vue",
+    "github",
+    "repositories",
+    "vuetify"
+  ],
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
