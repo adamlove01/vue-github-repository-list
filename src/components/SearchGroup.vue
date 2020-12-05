@@ -188,7 +188,8 @@ export default {
       if (!this.tagList.includes(tag)) this.tagList.push(tag)
     },
     handleShowMore(i) {
-      // Update Item
+      // Update Item. We must update the entire object with this.$set()
+      // because Vue will not track a nested object inside an array
       let newItem = this.items[i]
       newItem.showMore = !newItem.showMore
       this.$set(this.items, i, newItem)

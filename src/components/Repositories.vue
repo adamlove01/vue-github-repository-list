@@ -55,20 +55,20 @@
           <div v-show="item.showMore">
             <v-row>
               <v-col cols="12" md="4">
-                <p>Updated at: {{ item.updated_at }}</p>
-                <p>Created at: {{ item.created_at }}</p>
+                <p>Updated at: {{ niceDate(item.updated_at) }}</p>
+                <p>Created at: {{ niceDate(item.created_at) }}</p>
               </v-col>
-              <v-col cols="12" md="6">
+              <v-col cols="12" md="5">
                 <p>License: {{ item.license.name }}</p>
                 <p>Forks: {{ item.forks_count }}</p>
               </v-col>
-              <v-col cols="12" md="2">
+              <v-col cols="12" md="3">
                 <p>
-                  <v-icon large color="blue">mdi-star-outline</v-icon>Stars:
+                  <v-icon color="blue">mdi-star-outline</v-icon> Stars:
                   {{ item.stargazers_count }}
                 </p>
                 <p>
-                  <v-icon large color="blue">mdi-eye-outline</v-icon>Watchers:
+                  <v-icon color="blue">mdi-eye-outline</v-icon> Watchers:
                   {{ item.watchers_count }}
                 </p>
               </v-col>
@@ -93,6 +93,10 @@ export default {
     },
     triggerMoreInfo(i) {
       this.$emit('trigger-more-info', i)
+    },
+    niceDate(date) {
+      const d = new Date(date)
+      return d.toDateString()
     },
   },
 }

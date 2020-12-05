@@ -1,6 +1,6 @@
 # Github Repo List
 
-This app allows you to list all repos of any Github user by user name. Within the resulting list u you can search the repo name and description \and also filter by programming language using tags.
+This app allows you to list all repos of any Github user by user name. Within the resulting list you can search the repo name and description and also filter by programming language using tags.
 
 ## App Views
 
@@ -16,7 +16,7 @@ This displays the title and subtitle of the app.
 
 ### SearchGroup.vue
 
-This component has a search box and retrieves the repository list from Github and displays the data in Repositories.vue. It also shows a card with the user's name and avavtar.
+This component has a search box and retrieves the repository list from Github and displays the data in Repositories.vue. It also shows a card with the user's name and avatar.
 
 ### Repositories.vue
 
