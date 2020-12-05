@@ -1,6 +1,6 @@
 # Github Repo List
 
-This app allows you to list up to 100 of the 'latest updated' repos of any Github user by user name. You can search the name and description within the repo list and also filter by programming language using tags.
+This app allows you to list all repos of any Github user by user name. Within the resulting list u you can search the repo name and description \and also filter by programming language using tags.
 
 ## App Views
 
@@ -16,7 +16,7 @@ This displays the title and subtitle of the app.
 
 ### SearchGroup.vue
 
-Here you can type a Github user name and see a list repos for that user.
+This component has a search box and retrieves the repository list from Github and displays the data in Repositories.vue. It also shows a card with the user's name and avavtar.
 
 ### Repositories.vue
 
@@ -28,7 +28,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-Install all project dependencies
+Clone the project and cd to its folder.
 
 ```
 npm install

@@ -52,7 +52,7 @@
           MORE INFO
         </p>
         <transition name="slide">
-          <div v-show="moreInfo[index]">
+          <div v-show="item.showMore">
             <v-row>
               <v-col cols="12" md="4">
                 <p>Updated at: {{ item.updated_at }}</p>
@@ -63,8 +63,14 @@
                 <p>Forks: {{ item.forks_count }}</p>
               </v-col>
               <v-col cols="12" md="2">
-                <p>Stars: {{ item.stargazers_count }}</p>
-                <p>Watchers: {{ item.watchers_count }}</p>
+                <p>
+                  <v-icon large color="blue">mdi-star-outline</v-icon>Stars:
+                  {{ item.stargazers_count }}
+                </p>
+                <p>
+                  <v-icon large color="blue">mdi-eye-outline</v-icon>Watchers:
+                  {{ item.watchers_count }}
+                </p>
               </v-col>
             </v-row>
           </div>
@@ -80,7 +86,6 @@ export default {
   name: 'Repositories',
   props: {
     repoItems: Array,
-    moreInfo: Array,
   },
   methods: {
     tagFilter(tag) {
