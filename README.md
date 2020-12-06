@@ -1,6 +1,8 @@
 # Github Repo List
 
-This app allows you to list all repos of any Github user by user name. Within the resulting list you can search the repo name and description and also filter by programming language using tags.
+This app allows you to list all repos of any Github user by user name. Within the resulting list you can search the repo name and description and also filter by programming language.
+
+![Alt text](app.png?raw=true 'App')
 
 ## App Views
 
@@ -59,4 +61,4 @@ This project was bootstrapped with [Vue CLI](https://github.com/vuejs/vue-cli). 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License.
