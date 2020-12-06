@@ -4,7 +4,7 @@
       <v-expansion-panel v-for="item in repoItems" :key="item.id">
         <v-expansion-panel-header>
           <v-row>
-            <v-col cols="12" md="4">
+            <v-col cols="12" md="5">
               <h3 class="h6 pb-2">{{ item.name }}</h3>
               <p class="body-1 mb-0">{{ item.description }}</p>
               <a
@@ -16,7 +16,7 @@
               </a>
             </v-col>
 
-            <v-col cols="12" md="5">
+            <v-col cols="12" md="4">
               <a :href="item.html_url" target="_blank">
                 <v-btn class="mr-2" color="white">
                   <v-icon class="mr-2">
@@ -60,11 +60,11 @@
 
         <v-expansion-panel-content>
           <v-row>
-            <v-col cols="12" md="4">
+            <v-col cols="12" md="5">
               <p class="mb-1">Updated at: {{ niceDate(item.updated_at) }}</p>
               <p class="mb-0">Created at: {{ niceDate(item.created_at) }}</p>
             </v-col>
-            <v-col cols="12" md="5">
+            <v-col cols="12" md="4">
               <p class="mb-1">License: {{ item.license.name }}</p>
               <p class="mb-0">Forks: {{ item.forks_count }}</p>
             </v-col>

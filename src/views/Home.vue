@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container style="max-width: 1200px">
     <Header title="Github Repo List" />
     <SearchGroup />
   </v-container>
