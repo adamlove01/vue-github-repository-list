@@ -1,7 +1,6 @@
 <template>
   <v-container>
     <v-row>
-      <v-spacer></v-spacer>
       <v-col cols="12" sm="6">
         <v-combobox
           hide-no-data
@@ -96,11 +95,7 @@
     </v-row>
 
     <v-row v-show="items.length > 0">
-      <Repositories
-        :repoItems="filteredItems"
-        @trigger-more-info="handleShowMore"
-        @tag-filter-x="filterByTag"
-      />
+      <Repositories :repoItems="filteredItems" @tag-filter-x="filterByTag" />
     </v-row>
   </v-container>
 </template>
@@ -186,13 +181,6 @@ export default {
     filterByTag(tag) {
       // Add the clicked tag if not already selected
       if (!this.tagList.includes(tag)) this.tagList.push(tag)
-    },
-    handleShowMore(i) {
-      // Update Item. We must update the entire object with this.$set()
-      // because Vue will not track a nested object inside an array
-      let newItem = this.items[i]
-      newItem.showMore = !newItem.showMore
-      this.$set(this.items, i, newItem)
     },
     async getUser(username) {
       // Get Github user and pull userInfo from the result
